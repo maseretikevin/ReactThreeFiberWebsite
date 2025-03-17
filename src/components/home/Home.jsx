@@ -50,7 +50,6 @@ const Overlay = () => {
           </svg> */}
         </section>
       </main>
-      <Footer />
     </>
   );
 };
