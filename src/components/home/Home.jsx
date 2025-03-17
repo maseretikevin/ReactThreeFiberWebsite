@@ -4,7 +4,6 @@ import { Canvas } from "@react-three/fiber";
 // import { mediaConstants } from "../../assets/constants/constants.js";
 import Nav from "../navigation/Nav.jsx";
 import "../../index.css";
-import Footer from "../footer/Footer.jsx";
 
 function Models() {
   return (
