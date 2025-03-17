@@ -1,10 +1,28 @@
 import { Html } from "@react-three/drei";
+import emailjs from "@emailjs/browser";
 import React from "react";
 import Nav from "../navigation/Nav";
 import Footer from "../footer/Footer";
 import Social from "../Social";
 
+const SERVICE_ID = "service_siieegk";
+const TEMPLATE_ID = "template_ee1ds7i";
+const PUBLIC_KEY = "wcyCnhogM1_ZoCzQ-";
 const Contact = () => {
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        alert("Message sent succssfully");
+      },
+      (error) => {
+        console.log(error.text);
+        alert("Something went wrong");
+      }
+    );
+    e.target.reset();
+  };
   return (
     <>
       <Nav />
@@ -66,24 +84,22 @@ const Contact = () => {
 
               <div class="col-lg-6 col-12 mt-5 mt-lg-0">
                 <form
-                  action="#"
-                  method="get"
                   class="custom-form contact-form"
-                  role="form"
+                  onSubmit={handleOnSubmit}
                 >
                   <div class="row">
                     <div class="col-lg-6 col-md-6 col-12">
                       <div class="form-floating">
                         <input
                           type="text"
-                          name="name"
+                          name="from_name"
                           id="name"
                           class="form-control"
                           placeholder="Name"
                           required=""
                         />
 
-                        <label for="floatingInput">Name</label>
+                        <label for="from_name">Name</label>
                       </div>
                     </div>
 
@@ -91,7 +107,7 @@ const Contact = () => {
                       <div class="form-floating">
                         <input
                           type="email"
-                          name="email"
+                          name="from_email"
                           id="email"
                           pattern="[^ @]*@[^ @]*"
                           class="form-control"
@@ -99,7 +115,7 @@ const Contact = () => {
                           required=""
                         />
 
-                        <label for="floatingInput">Email address</label>
+                        <label for="from_email">Email address</label>
                       </div>
                     </div>
 
@@ -112,7 +128,7 @@ const Contact = () => {
                           placeholder="Tell me about the project"
                         ></textarea>
 
-                        <label for="floatingTextarea">Tell me more</label>
+                        <label for="message">Tell me more</label>
                       </div>
                     </div>
 
