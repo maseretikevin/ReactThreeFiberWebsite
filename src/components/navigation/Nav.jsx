@@ -9,18 +9,18 @@ const Nav = () => {
   return (
     <>
       <div className="sticky-wrapper is-sticky" style={{ height: 93 }}>
-        <nav className="navbar navbar-expand-lg" style={{ position: "fixed" }}>
+        <nav className="navbar navbar-expand-lg">
           <div className="container">
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNav"
               aria-controls="navbarNav"
-              aria-expanded="true"
+              aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
 
             <a href="/" className="navbar-brand mx-auto mx-lg-0">
@@ -63,7 +63,12 @@ const Nav = () => {
 
               <div className="d-lg-flex align-items-center d-none ms-auto">
                 <i className="navbar-icon bi-telephone-plus me-3"></i>
-                <a className="custom-btn btn">ello</a>
+                <a
+                  className="custom-btn btn"
+                  href="https://www.linkedin.com/in/masereti-kevin-136310117"
+                >
+                  @maseretikevin
+                </a>
               </div>
             </div>
           </div>

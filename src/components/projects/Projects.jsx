@@ -1,87 +1,84 @@
-import { Html } from "@react-three/drei";
 import React from "react";
-import Nav from "../navigation/Nav";
 import Footer from "../footer/Footer";
 
 const Projects = () => {
   return (
     <>
-      <Nav />
       <main>
-        <section class="projects section-padding" id="section_4">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 col-md-8 col-12 ms-auto">
-                <div class="section-title-wrap d-flex justify-content-center align-items-center mb-4">
+        <section className="projects section-padding" id="section_4">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-8 col-md-8 col-12 ms-auto">
+                <div className="section-title-wrap d-flex justify-content-center align-items-center mb-4">
                   <img
                     src="images/white-desk-work-study-aesthetics.jpg"
-                    class="avatar-image img-fluid"
+                    className="avatar-image img-fluid"
                     alt=""
                   />
 
-                  <h2 class="text-white ms-4 mb-0">Projects</h2>
+                  <h2 className="text-white ms-4 mb-0">Projects</h2>
                 </div>
               </div>
 
-              <div class="clearfix"></div>
+              <div className="clearfix"></div>
 
-              <div class="col-lg-4 col-md-6 col-12">
-                <div class="projects-thumb">
-                  <div class="projects-info">
-                    <small class="projects-tag">Branding</small>
+              <div className="col-lg-4 col-md-6 col-12">
+                <div className="projects-thumb">
+                  <div className="projects-info">
+                    <small className="projects-tag">Full Stack Website</small>
 
-                    <h3 class="projects-title">Zoik agency</h3>
+                    <h3 className="projects-title">Justice Nest</h3>
                   </div>
 
                   <a
-                    href="images/projects/nikhil-KO4io-eCAXA-unsplash.jpg"
-                    class="popup-image"
+                    href="images/projects/justicenest.JPG"
+                    className="popup-image"
                   >
                     <img
-                      src="images/projects/nikhil-KO4io-eCAXA-unsplash.jpg"
-                      class="projects-image img-fluid"
+                      src="images/projects/justicenest.JPG"
+                      className="projects-image img-fluid"
                       alt=""
                     />
                   </a>
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-12">
-                <div class="projects-thumb">
-                  <div class="projects-info">
-                    <small class="projects-tag">Photography</small>
+              <div className="col-lg-4 col-md-6 col-12">
+                <div className="projects-thumb">
+                  <div className="projects-info">
+                    <small className="projects-tag">Data Processing</small>
 
-                    <h3 class="projects-title">The Watch</h3>
+                    <h3 className="projects-title">Cherry Pro</h3>
                   </div>
 
                   <a
-                    href="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg"
-                    class="popup-image"
+                    href="images/projects/othayalogin.JPG"
+                    className="popup-image"
                   >
                     <img
-                      src="images/projects/the-5th-IQYR7N67dhM-unsplash.jpg"
-                      class="projects-image img-fluid"
+                      src="images/projects/othayalogin.JPG"
+                      className="projects-image img-fluid"
                       alt=""
                     />
                   </a>
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-12">
-                <div class="projects-thumb">
-                  <div class="projects-info">
-                    <small class="projects-tag">Website</small>
+              <div className="col-lg-4 col-md-6 col-12">
+                <div className="projects-thumb">
+                  <div className="projects-info">
+                    <small className="projects-tag">Mailing & Design</small>
 
-                    <h3 class="projects-title">Polo</h3>
+                    <h3 className="projects-title">Auris</h3>
                   </div>
 
                   <a
-                    href="images/projects/true-agency-9Bjog5FZ-oc-unsplash.jpg"
-                    class="popup-image"
+                    href="images/projects/aurislogin.JPG"
+                    className="popup-image"
                   >
                     <img
-                      src="images/projects/true-agency-9Bjog5FZ-oc-unsplash.jpg"
-                      class="projects-image img-fluid"
+                      src="images/projects/aurislogin.JPG"
+                      className="projects-image img-fluid"
                       alt=""
                     />
                   </a>

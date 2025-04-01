@@ -1,18 +1,24 @@
-import { Html } from "@react-three/drei";
-import React from "react";
-import Nav from "../navigation/Nav";
+import {
+  Center,
+  FlyControls,
+  Html,
+  Loader,
+  OrbitControls,
+} from "@react-three/drei";
+import React, { Suspense } from "react";
 import { mediaConstants } from "../../assets/constants/constants.js";
 import Footer from "../footer/Footer.jsx";
+import { Canvas } from "@react-three/fiber";
+import { MyCharacterbkp } from "../transformed/Mycharacterbkp.jsx";
 
 const About = () => {
   return (
     <>
-      <Nav />
       <main>
         <section className="about section-padding" id="section_2">
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 col-12 mt-5 mt-lg-0">
+              <div className="col-lg-6 sm-12 col-12 mt-5 mt-lg-0">
                 <div className="about-thumb">
                   <div className="section-title-wrap d-flex justify-content-end align-items-center mb-4">
                     <h2 className="text-white me-4 mb-0">My Story</h2>
@@ -33,136 +39,117 @@ const About = () => {
                     <a href="https://templatemo.com" target="_blank">
                       TemplateMo
                     </a>
-                    . This layout is based on Bootstrap v5.1.3 CSS and JS
-                    libraries. Image credits go to{" "}
-                    <a href="https://unsplash.com" target="_blank">
-                      Unsplash
-                    </a>{" "}
-                    and{" "}
-                    <a href="https://freepik.com" target="_blank">
-                      FreePik
-                    </a>{" "}
-                    for images used in this page.
+                    . My professional expertise stems from interpersonal
+                    experience through making meaningful relationships with
+                    others and dedication towards a common cause.
                   </p>
 
                   <p>
-                    You are allowed to use this template for your websites. You
-                    are not allowed to redistribute the template ZIP file on any
-                    other website. Please{" "}
-                    <a href="https://templatemo.com/contact" target="_blank">
-                      contact us
-                    </a>{" "}
-                    for more info.
+                    For more inquiries, you can reach me through my social media
+                    handles
+                    <a href="#footer"> 👇 </a>
+                    or through the contact page
+                    <a href="/contact"> 👉 .</a>
                   </p>
                 </div>
+              </div>
+              <div className="col-lg-6 col-12 mt-5 mt-lg-0">
+                <Canvas camera={{ fov: 60, near: 0.1, far: 1000 }}>
+                  <OrbitControls />
+                  <color attach="background" args={["#dedddf"]} />
+                  <Suspense fallback={<Loader />}>
+                    <Center>
+                      <MyCharacterbkp />
+                    </Center>
+                  </Suspense>
+                </Canvas>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="featured section-padding">
-          <div class="container">
-            <div class="row">
+        <section className="featured section-padding">
+          <div className="container">
+            <div className="row">
               <div className="col-lg-12 col-12">
                 <h3 className="text-center mb-5">Experience</h3>
               </div>
-              <div class="col-lg-6" data-aos="fade-up">
-                <h3 class="resume-title">Sumary</h3>
-                <div class="resume-item pb-0">
-                  <h4>Alex Smith</h4>
+              <div className="col-lg-6" data-aos="fade-up">
+                <h3 className="resume-title">Summary</h3>
+                <div className="resume-item pb-0">
+                  <h4>Masereti Kevin</h4>
                   <p>
                     <em>
-                      Innovative and deadline-driven Graphic Designer with 3+
-                      years of experience designing and developing user-centered
-                      digital/print marketing material from initial concept to
+                      Innovative and deadline-driven Web Developer with 3+ years
+                      of experience developing and providing user support for
+                      user-centered web applications from initial concept to
                       final, polished deliverable.
                     </em>
                   </p>
                   <ul>
-                    <li>Portland par 127,Orlando, FL</li>
-                    <li>(123) 456-7891</li>
-                    <li>alice.barkley@example.com</li>
+                    <li>Nakuru, Kenya</li>
+                    <li>+254716611936</li>
+                    <li>maseretikevin@gmail.com</li>
                   </ul>
                 </div>
 
-                <h3 class="resume-title">Education</h3>
-                <div class="resume-item">
-                  <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                  <h5>2015 - 2016</h5>
+                <h3 className="resume-title">Web Developer</h3>
+                <div className="resume-item">
+                  <h4>Volunteer- Justice Nest</h4>
+                  <h5>NOVEMBER 2024 – TO DATE</h5>
                   <p>
-                    <em>Rochester Institute of Technology, Rochester, NY</em>
+                    <a href="www.justicenest.org">www.justicenest.org</a>
                   </p>
                   <p>
-                    Qui deserunt veniam. Et sed aliquam labore tempore sed
-                    quisquam iusto autem sit. Ea vero voluptatum qui ut
-                    dignissimos deleniti nerada porti sand markend
-                  </p>
-                </div>
-                <div class="resume-item">
-                  <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-                  <h5>2010 - 2014</h5>
-                  <p>
-                    <em>Rochester Institute of Technology, Rochester, NY</em>
-                  </p>
-                  <p>
-                    Quia nobis sequi est occaecati aut. Repudiandae et iusto
-                    quae reiciendis et quis Eius vel ratione eius unde vitae
-                    rerum voluptates asperiores voluptatem Earum molestiae
-                    consequatur neque etlon sader mart dila
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="resume-title">Professional Experience</h3>
-                <div class="resume-item">
-                  <h4>Senior graphic design specialist</h4>
-                  <h5>2019 - Present</h5>
-                  <p>
-                    <em>Experion, New York, NY </em>
+                    I was engaged by the startup to provide an all-round online
+                    presence that is typical of an NGO. I fine-tuned myself in
+                    areas like:
                   </p>
                   <ul>
                     <li>
-                      Lead in the design, development, and implementation of the
-                      graphic, layout, and production communication materials
+                      Communication &amp; Reporting (Responding to updates,
+                      Newsletters and different media).
                     </li>
                     <li>
-                      Delegate tasks to the 7 members of the design team and
-                      provide counsel on all aspects of the project.{" "}
+                      Aesthetics (Optimizations for readability and
+                      accessibility of online resources through design).
                     </li>
                     <li>
-                      Supervise the assessment of all graphic materials in order
-                      to ensure quality and accuracy of the design
-                    </li>
-                    <li>
-                      Oversee the efficient use of production project budgets
-                      ranging from $2,000 - $25,000
+                      Security &amp; Redundancy (Building fail-safe platforms).
                     </li>
                   </ul>
                 </div>
-                <div class="resume-item">
-                  <h4>Graphic design specialist</h4>
-                  <h5>2017 - 2018</h5>
+              </div>
+              <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div className="resume-item">
+                  <h4>Junior Developer - Alphaset Africa</h4>
+                  <h5>DECEMBER 2023 – SEPTEMBER 2024</h5>
+
                   <p>
-                    <em>Stepping Stone Advertising, New York, NY</em>
+                    Working alongside other professionals within the industry
+                    imparted on me a better understanding of different
+                    approaches within the tech industry towards establishing and
+                    optimizing an online ecosystem as a first responder.
                   </p>
+                </div>
+
+                <h3 className="resume-title">Other Professional Experiences</h3>
+                <div className="resume-item">
+                  <h4>Internship - County Government of Nakuru</h4>
+                  <h5>FEBRUARY 2022 – OCTOBER 2022</h5>
+                  <p>
+                    <em>Intern under the 2022 cohort </em>
+                  </p>
+                  <p>
+                    I was privileged to work as an intern under the same
+                    department and extend my expertise in tackling a range of IT
+                    challenges in the environment of an office setting.
+                  </p>
+                  <p>Some of my tasks included</p>
                   <ul>
-                    <li>
-                      Developed numerous marketing programs (logos,
-                      brochures,infographics, presentations, and
-                      advertisements).
-                    </li>
-                    <li>
-                      Managed up to 5 projects or tasks at a given time while
-                      under pressure
-                    </li>
-                    <li>
-                      Recommended and consulted with clients on the most
-                      appropriate graphic design
-                    </li>
-                    <li>
-                      Created 4+ design presentations and proposals a month for
-                      clients and account managers
-                    </li>
+                    <li>Network troubleshooting</li>
+                    <li>Basic office operations</li>
+                    <li>Hardware and software maintenance</li>
                   </ul>
                 </div>
               </div>
@@ -174,18 +161,20 @@ const About = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-12 col-12">
-                <h3 className="text-center mb-5">Projects I've worked</h3>
+                <h3 className="text-center mb-5">
+                  Projects I've contributed to
+                </h3>
               </div>
 
               <div className="col-lg-3 col-4 ms-auto clients-item-height">
                 <img
                   src="images/logo justice nest.png"
-                  className="clients-image img-fluid"
+                  className="clients-image img-fluid projects"
                   alt=""
                 />
               </div>
 
-              <div className="col-lg-3 col-4 clients-item-height">
+              <div className="col-lg-3 col-4 clients-item-height ">
                 <img
                   src="images/Caritas.jpeg"
                   className="clients-image img-fluid"
@@ -193,18 +182,18 @@ const About = () => {
                 />
               </div>
 
-              <div className="col-lg-3 col-4 clients-item-height">
+              <div className="col-lg-3 col-4 clients-item-height ">
                 <img
                   src="images/logo.png"
-                  className="clients-image img-fluid"
+                  className="clients-image img-fluid projects"
                   alt=""
                 />
               </div>
 
-              <div className="col-lg-3 col-4 clients-item-height">
+              <div className="col-lg-3 col-4 clients-item-height ">
                 <img
                   src="images/android-chrome-192x192.png"
-                  className="clients-image img-fluid"
+                  className="clients-image img-fluid projects"
                   alt=""
                 />
               </div>
@@ -340,5 +329,19 @@ const About = () => {
     </>
   );
 };
+
+function Avatar() {
+  return (
+    <Canvas camera={{ fov: 60, near: 0.1, far: 1000 }}>
+      <OrbitControls />
+      <color attach="background" args={["#dedddf"]} />
+      <Suspense fallback={<Loader />}>
+        <Center>
+          <MyCharacterbkp />
+        </Center>
+      </Suspense>
+    </Canvas>
+  );
+}
 
 export default About;

@@ -1,7 +1,5 @@
-import { Html } from "@react-three/drei";
 import emailjs from "@emailjs/browser";
 import React from "react";
-import Nav from "../navigation/Nav";
 import Footer from "../footer/Footer";
 import Social from "../Social";
 
@@ -25,7 +23,6 @@ const Contact = () => {
   };
   return (
     <>
-      <Nav />
       <main>
         <section class="contact section-padding" id="section_5">
           <div class="container">
@@ -96,7 +93,7 @@ const Contact = () => {
                           id="name"
                           class="form-control"
                           placeholder="Name"
-                          required=""
+                          required
                         />
 
                         <label for="from_name">Name</label>
@@ -112,7 +109,6 @@ const Contact = () => {
                           pattern="[^ @]*@[^ @]*"
                           class="form-control"
                           placeholder="Email address"
-                          required=""
                         />
 
                         <label for="from_email">Email address</label>
@@ -126,6 +122,7 @@ const Contact = () => {
                           id="message"
                           name="message"
                           placeholder="Tell me about the project"
+                          required
                         ></textarea>
 
                         <label for="message">Tell me more</label>
