@@ -1,7 +1,6 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import { Html, Preload, useAnimations, useGLTF } from "@react-three/drei";
 import scenePath from "/models/mycharacter.glb";
-import { useFrame } from "@react-three/fiber";
 
 const Avatar = () => {
   const [index, setIndex] = useState(2);
@@ -53,20 +52,20 @@ export function MyCharacterbkp() {
     </>
   );
 }
-function Annotation({ children, ...props }) {
-  return (
-    <Html
-      {...props}
-      transform
-      geometry={
-        /** The geometry is optional, it allows you to use any shape.
-         *  By default it would be a plane. We need round edges here ...
-         */
-        <roundedPlaneGeometry args={[1.66, 0.47, 0.24]} />
-      }
-    >
-      <div className="annotation">{children}</div>
-    </Html>
-  );
-}
+// function Annotation({ children, ...props }) {
+//   return (
+//     <Html
+//       {...props}
+//       transform
+//       geometry={
+//         /** The geometry is optional, it allows you to use any shape.
+//          *  By default it would be a plane. We need round edges here ...
+//          */
+//         <roundedPlaneGeometry args={[1.66, 0.47, 0.24]} />
+//       }
+//     >
+//       <div className="annotation">{children}</div>
+//     </Html>
+//   );
+// }
 useGLTF.preload(scenePath);

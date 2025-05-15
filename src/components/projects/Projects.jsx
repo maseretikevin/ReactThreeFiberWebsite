@@ -1,10 +1,12 @@
 import React from "react";
 import Footer from "../footer/Footer";
+import Nav from "../navigation/Nav";
 
 const Projects = () => {
   return (
     <>
       <main>
+        <Nav />
         <section className="projects section-padding" id="section_4">
           <div className="container">
             <div className="row">

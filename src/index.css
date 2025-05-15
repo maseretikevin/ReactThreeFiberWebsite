@@ -191,6 +191,10 @@ strong {
   padding: 10px 30px;
 }
 
+h2 .overlap {
+  width: 100%;
+  background-color: red;
+}
 /*---------------------------------------
   AVATAR IMAGE               
 -----------------------------------------*/
@@ -385,6 +389,8 @@ strong {
 .navbar .container {
   border-radius: var(--border-radius-small);
   padding: 10px 25px;
+  height: 100%;
+  width: 100%;
 }
 
 .navbar-brand {
@@ -434,6 +440,7 @@ strong {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--secondary-color);
+  cursor: pointer;
 }
 
 .navbar-toggler {
@@ -686,6 +693,21 @@ strong {
   width: 45px;
 }
 
+/*---------------------------------------
+  NAVIGATE BUTTON IN HOME             
+-----------------------------------------*/
+.navigate {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  z-index: 1000;
+}
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
@@ -1269,6 +1291,12 @@ strong {
   .contact-info {
     border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
     padding: 40px 30px;
+    -webkit-border-radius: 0 0 var(--border-radius-small)
+      var(--border-radius-small);
+    -moz-border-radius: 0 0 var(--border-radius-small)
+      var(--border-radius-small);
+    -ms-border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
+    -o-border-radius: 0 0 var(--border-radius-small) var(--border-radius-small);
   }
 
   .contact-info-border-start {

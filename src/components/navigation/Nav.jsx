@@ -28,34 +28,34 @@ const Nav = () => {
             </a>
 
             <div className="d-flex align-items-center d-lg-none">
-              <i className="navbar-icon bi-telephone-plus me-3"></i>
+              <i className="navbar-icon bi-globe me-3"></i>
               <button className="custom-btn btn custom-link">
-                +254716611936
+                maseretikevin@gmail
               </button>
             </div>
 
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-lg-5">
                 <li className="nav-item">
-                  <NavLink className="nav-link click-scroll" to="/">
+                  <NavLink className="nav-link click-scroll" to={"/"}>
                     Home
                   </NavLink>
                 </li>
 
                 <li className="nav-item">
-                  <NavLink className="nav-link click-scroll" to="/about">
+                  <NavLink className="nav-link click-scroll" to={"/about"}>
                     About
                   </NavLink>
                 </li>
 
                 <li className="nav-item">
-                  <NavLink className="nav-link click-scroll" to="/projects">
+                  <NavLink className="nav-link click-scroll" to={"/projects"}>
                     Projects
                   </NavLink>
                 </li>
 
                 <li className="nav-item">
-                  <NavLink className="nav-link click-scroll" to="/contact">
+                  <NavLink className="nav-link click-scroll" to={"/contact"}>
                     Contact
                   </NavLink>
                 </li>

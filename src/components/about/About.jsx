@@ -10,11 +10,13 @@ import { mediaConstants } from "../../assets/constants/constants.js";
 import Footer from "../footer/Footer.jsx";
 import { Canvas } from "@react-three/fiber";
 import { MyCharacterbkp } from "../transformed/Mycharacterbkp.jsx";
+import Nav from "../navigation/Nav.jsx";
 
 const About = () => {
   return (
     <>
       <main>
+        <Nav />
         <section className="about section-padding" id="section_2">
           <div className="container">
             <div className="row">
@@ -35,13 +37,11 @@ const About = () => {
                   </h3>
 
                   <p>
-                    I'm a web developer{" "}
-                    <a href="https://templatemo.com" target="_blank">
-                      TemplateMo
-                    </a>
-                    . My professional expertise stems from interpersonal
-                    experience through making meaningful relationships with
-                    others and dedication towards a common cause.
+                    I'm a web developer
+                    <a href="https://templatemo.com" target="_blank"></a>
+                    experienced in Html, css, Bootstrap, Tailwind, Javascript,
+                    JQuery, PhP, MySql, SqLite, ThreeJs, React, React Three
+                    Fiber, and Blender for my 3d modeling.
                   </p>
 
                   <p>
@@ -53,15 +53,12 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-6 col-12 mt-5 mt-lg-0">
+              <div className="col-lg-6 col-12 mt-5 mt-lg-0 about-avatar">
                 <Canvas camera={{ fov: 60, near: 0.1, far: 1000 }}>
                   <OrbitControls />
-                  <color attach="background" args={["#dedddf"]} />
-                  <Suspense fallback={<Loader />}>
-                    <Center>
-                      <MyCharacterbkp />
-                    </Center>
-                  </Suspense>
+                  <Center>
+                    <MyCharacterbkp />
+                  </Center>
                 </Canvas>
               </div>
             </div>
@@ -80,10 +77,10 @@ const About = () => {
                   <h4>Masereti Kevin</h4>
                   <p>
                     <em>
-                      Innovative and deadline-driven Web Developer with 3+ years
-                      of experience developing and providing user support for
-                      user-centered web applications from initial concept to
-                      final, polished deliverable.
+                      Innovative and self-driven Web Developer with 3+ years of
+                      experience developing and providing user support for
+                      user-centered web applications from initial concepts to
+                      stable or polished systems.
                     </em>
                   </p>
                   <ul>
@@ -97,12 +94,10 @@ const About = () => {
                 <div className="resume-item">
                   <h4>Volunteer- Justice Nest</h4>
                   <h5>NOVEMBER 2024 – TO DATE</h5>
-                  <p>
-                    <a href="www.justicenest.org">www.justicenest.org</a>
-                  </p>
+
                   <p>
                     I was engaged by the startup to provide an all-round online
-                    presence that is typical of an NGO. I fine-tuned myself in
+                    presence that is typical of an NGO. I have refined myself in
                     areas like:
                   </p>
                   <ul>
@@ -127,9 +122,9 @@ const About = () => {
 
                   <p>
                     Working alongside other professionals within the industry
-                    imparted on me a better understanding of different
-                    approaches within the tech industry towards establishing and
-                    optimizing an online ecosystem as a first responder.
+                    imparted on me a better understanding of how to handle an
+                    online ecosystem when working towards building scalable
+                    applications that bank on optimizing user experience.
                   </p>
                 </div>
 
@@ -137,9 +132,7 @@ const About = () => {
                 <div className="resume-item">
                   <h4>Internship - County Government of Nakuru</h4>
                   <h5>FEBRUARY 2022 – OCTOBER 2022</h5>
-                  <p>
-                    <em>Intern under the 2022 cohort </em>
-                  </p>
+
                   <p>
                     I was privileged to work as an intern under the same
                     department and extend my expertise in tackling a range of IT
@@ -177,7 +170,7 @@ const About = () => {
               <div className="col-lg-3 col-4 clients-item-height ">
                 <img
                   src="images/Caritas.jpeg"
-                  className="clients-image img-fluid"
+                  className="clients-image img-fluid projects"
                   alt=""
                 />
               </div>
@@ -185,7 +178,7 @@ const About = () => {
               <div className="col-lg-3 col-4 clients-item-height ">
                 <img
                   src="images/logo.png"
-                  className="clients-image img-fluid projects"
+                  className="clients-image img-fluid "
                   alt=""
                 />
               </div>
@@ -261,7 +254,8 @@ const About = () => {
 
                       <p>
                         I was awarded a certificate for successfully completing
-                        the second module for the CCNA networking course.
+                        the second module for the CCNA networking course at
+                        Kabarak University.
                       </p>
 
                       <a
@@ -292,11 +286,12 @@ const About = () => {
 
                       <p>
                         I was awarded a certificate for completing a four-year
-                        Bachelor’s degree course in Information Technology.
+                        Bachelor’s degree course in Information Technology at
+                        Machakos University.
                       </p>
 
                       <div className="services-icon-wrap d-flex justify-content-center align-items-center">
-                        <i className="services-icon bi-phone"></i>
+                        <i className="services-icon bi-book-fill"></i>
                       </div>
                     </div>
                   </div>
@@ -312,10 +307,13 @@ const About = () => {
                         </div>
                       </div>
 
-                      <p>I completed my secondary school studies</p>
+                      <p>
+                        I completed my secondary school studies at Anestar
+                        Bahati
+                      </p>
 
                       <div className="services-icon-wrap d-flex justify-content-center align-items-center">
-                        <i className="services-icon bi-google"></i>
+                        <i className="services-icon bi-book-half"></i>
                       </div>
                     </div>
                   </div>

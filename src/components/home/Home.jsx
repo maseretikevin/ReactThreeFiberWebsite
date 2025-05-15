@@ -8,6 +8,7 @@ import {
   Clouds,
   Decal,
   Float,
+  Html,
   OrbitControls,
   Stage,
 } from "@react-three/drei";
@@ -16,6 +17,7 @@ import "../../index.css";
 import { AmbientLight, TextureLoader } from "three";
 import PlayButton from "../PlayButton.jsx";
 import { MyCharacterbkp } from "../transformed/Mycharacterbkp.jsx";
+import Nav from "../navigation/Nav.jsx";
 
 function Models() {
   const texture = useLoader(TextureLoader, mediaConstants.keyboard);
@@ -65,12 +67,7 @@ const Overlay = () => {
                     <h1 className="hero-title ms-3 mb-0">Hello!</h1>
                   </div>
 
-                  {/* <h2 className="mb-4">I'm available for freelance work</h2> */}
-                  <p className="mb-4">
-                    <button className="custom-btn btn custom-link">
-                      Let's begin
-                    </button>
-                  </p>
+                  <h2 className="mb-4 overlap">Welcome to my portfolio</h2>
                 </div>
               </div>
             </div>
@@ -89,7 +86,15 @@ const Overlay = () => {
   );
 };
 
-// const Guide = () => {};
+const Guide = () => {
+  return (
+    <p className="navigate">
+      <a className="custom-btn btn custom-link" href="/about">
+        More
+      </a>
+    </p>
+  );
+};
 
 const Home = () => {
   const [isPlaying, setisPlaying] = useState(false);
@@ -109,6 +114,7 @@ const Home = () => {
   return (
     <>
       <Overlay />
+      <Guide />
       <Canvas camera={{ fov: 60, near: 0.1, far: 1000 }}>
         <color attach="background" args={["#dedddf"]} />
         <OrbitControls />
